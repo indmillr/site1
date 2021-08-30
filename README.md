@@ -1,5 +1,5 @@
 # site1 repo
-An adaptation of a snapshot of a landing page into a personal bio page.
+A project: Adapting a snapshot of a landing page into a personal bio page.
 
 ## Goals:
 -- replicating layout of an existing website image <br>
