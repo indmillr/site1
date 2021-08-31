@@ -1,3 +1,35 @@
-<style>
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
 
-</style>
+.flexnav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #000000;
+    justify-content: space-between;
+    height: 85px;
+    align-items: center;
+    border: solid;
+    border-width: 0px 0px 1px 0px;
+    border-style: inset;
+    border-color: #000000;
+}
+
+.navdivleft {
+    flex: 0 0 100px;
+}
+
+.navdivmid {
+    
+}
+
+.navdivright {
+    flex: 0 0 225px;
+}
+
+img {
+    height: 85px;
+    width: 85px;
+}
