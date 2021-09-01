@@ -26,10 +26,51 @@ body {
 }
 
 .navdivright {
-    flex: 0 0 225px;
+    flex: 0 0 300px;
 }
 
 img {
     height: 85px;
     width: 85px;
+}
+
+.button-login {
+    background: url('login.png') no-repeat;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+.button-search {
+    background: url('search.png') no-repeat;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+
+.button-menu {
+    background: url('menu.png') no-repeat;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+.button-main {
+    background-color: #ffffff;
+    border: solid;
+    border-color: #cccccc;
+    font-size: 12px;
+    font-weight: bolder;
+    align-content: center;
+    border-width: 1px;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    padding: 3px 20px 3px 20px;
+    height: 25px;
+
 }
