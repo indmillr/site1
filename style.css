@@ -1,3 +1,7 @@
+html {
+    margin: 0px, 10px, 0px, 10px;
+}
+
 body {
     background-color: #ffffff;
     color: #000000;
@@ -22,51 +26,61 @@ body {
 }
 
 .navdivright {
-    flex: 0 0 300px;
+    flex: 0 0 275px;
+    align-content: right;
 }
 
-img {
-    height: 85px;
-    width: 85px;
+.btn {
+    cursor: pointer;
+    align-content: center;
+    vertical-align: middle;
 }
 
-.button-login {
+.btn-small {
+    width: 18px;
+    height: 18px;
+    border: none;
+}
+
+.btn-large {
+    height: 30px;
+    border: none;
+    align-content: center;
+    vertical-align: middle;
+    color: black;
+    font-size: 14px;
+    font-weight: bolder;
+    background-color: white;
+    padding: 20px;
+}
+
+.btn-login {
     background: url('images/login.png') no-repeat;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    border: none;
 }
 
-.button-search {
+.btn-search {
     background: url('images/search.png') no-repeat;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    border: none;
 }
 
-
-.button-menu {
-    background: url('images/menu.jpg') no-repeat;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
+.btn-gridmenu {
+    background: url('images/gridmenu.png') no-repeat;
+    width: 16px;
+    height: 16px;
     border: none;
+    align-content: center;
+    vertical-align: middle;
 }
 
-.button-main {
+.btn-sell {
     background-color: #ffffff;
     border: solid;
     border-color: #cccccc;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bolder;
-    align-content: center;
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 0;
     color: #000000;
-    cursor: pointer;
-    padding: 3px 20px 3px 20px;
-    height: 25px;
-
+    height: 30px;
+    width: 150px;
+    padding: 2px, 40px, 2px, 40px;
 }
