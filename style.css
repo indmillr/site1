@@ -21,10 +21,6 @@ body {
     flex: 0 0 100px;
 }
 
-.navdivmid {
-    
-}
-
 .navdivright {
     flex: 0 0 300px;
 }
@@ -35,7 +31,7 @@ img {
 }
 
 .button-login {
-    background: url('login.png') no-repeat;
+    background: url('images/login.png') no-repeat;
     cursor: pointer;
     width: 18px;
     height: 18px;
@@ -43,7 +39,7 @@ img {
 }
 
 .button-search {
-    background: url('search.png') no-repeat;
+    background: url('images/search.png') no-repeat;
     cursor: pointer;
     width: 18px;
     height: 18px;
@@ -52,7 +48,7 @@ img {
 
 
 .button-menu {
-    background: url('menu.png') no-repeat;
+    background: url('images/menu.jpg') no-repeat;
     cursor: pointer;
     width: 18px;
     height: 18px;
