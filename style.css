@@ -1,33 +1,36 @@
 html {
-    margin: 0px, 10px, 0px, 10px;
+    margin: 0px, 0px, 0px, 0px;
 }
 
 body {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #fff;
+    color: #000;
 }
 
-.flexnav {
+.nav {
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
-    color: #000000;
+    color: #000;
+    height: 125px;
     justify-content: space-between;
-    height: 85px;
     align-items: center;
     border: solid;
     border-width: 0px 0px 1px 0px;
     border-style: inset;
-    border-color: #000000;
+    border-color: #000;
 }
 
-.navdivleft {
+.navleft {
     flex: 0 0 100px;
+    margin-left: 30px;
 }
 
-.navdivright {
+.navright {
     flex: 0 0 275px;
     align-content: right;
+    margin-right: 30px;
 }
 
 .btn {
@@ -72,15 +75,32 @@ body {
 }
 
 .btn-sell {
-    background-color: #ffffff;
+    background-color: #fff;
     border: solid;
-    border-color: #cccccc;
+    border-color: #ccc;
     font-size: 14px;
     font-weight: bolder;
     border-width: 1px;
     border-radius: 0;
-    color: #000000;
+    color: #000;
     height: 30px;
     width: 150px;
     padding: 2px, 40px, 2px, 40px;
+}
+
+.main { 
+    float: left;
+    width: 33.33%
+}
+
+.mainleft { 
+    background-color: lightblue;
+}
+
+.mainmid {
+    background-color: lightpink;
+}
+
+.mainright {
+    background-color: lightgreen;
 }
