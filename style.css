@@ -12,6 +12,7 @@ body {
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
+    font-size: 16px;
     color: #000;
     height: 125px;
     justify-content: space-between;
@@ -20,6 +21,7 @@ body {
     border-width: 0px 0px 1px 0px;
     border-style: inset;
     border-color: #000;
+    margin-bottom: 50px;
 }
 
 .navleft {
@@ -36,7 +38,7 @@ body {
 .btn {
     cursor: pointer;
     align-content: center;
-    vertical-align: middle;
+   vertical-align: middle;
 }
 
 .btn-small {
@@ -51,7 +53,7 @@ body {
     align-content: center;
     vertical-align: middle;
     color: black;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bolder;
     background-color: white;
     padding: 20px;
@@ -88,19 +90,61 @@ body {
     padding: 2px, 40px, 2px, 40px;
 }
 
-.main { 
+.btn-bid {
+    background-color: #fff;
+    border: solid;
+    border-color: #000;
+    font-size: 14px;
+    font-weight: bolder;
+    border-width: 1px;
+    border-radius: 0;
+    color: #000;
+    height: 30px;
+    width: 175px;
+    padding: 3px, 60px, 3px, 60px; 
+    margin-left: 15px;
+    margin-bottom: 200px;
+}
+
+.left {
+    width: 28%;
+    padding: 100px 0px 0 115px;
     float: left;
-    width: 33.33%
+    font-size: 14px;
+    background-color: #fff;
 }
 
-.mainleft { 
-    background-color: lightblue;
+.middle {
+    width: 40%;
+    padding: 0 10px 0 0;
+    float: left;
+    background-color: #eee;
 }
 
-.mainmid {
-    background-color: lightpink;
+.right {
+    width: ;
+    padding: 0 10px 0 0;
+    float: right;
+    background-color: #eee;
+    height: auto;
 }
 
-.mainright {
-    background-color: lightgreen;
+h1 {
+    margin-top: 125px;
+    margin-bottom: 0px;
+    font-size: 55px;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-self: right;
+}
+
+.suitcase {
+    max-width: auto;
+    max-height: 575px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-right: 0px;
 }
