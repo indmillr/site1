@@ -17,11 +17,15 @@ body {
     height: 125px;
     justify-content: space-between;
     align-items: center;
-    border: solid;
-    border-width: 0px 0px 1px 0px;
-    border-style: inset;
-    border-color: #000;
-    margin-bottom: 50px;
+    border: none;
+    margin-bottom: 35px;
+}
+
+.main {
+    diplay: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .navleft {
@@ -107,26 +111,40 @@ body {
 }
 
 .left {
-    width: 28%;
+    text-align: left;
     padding: 100px 0px 0 115px;
     float: left;
+    width: auto;
+    margin-right: 75px;
     font-size: 14px;
     background-color: #fff;
 }
 
 .middle {
-    width: 40%;
-    padding: 0 10px 0 0;
+    text-align: right;
+    padding: 0 0 75px 0;
     float: left;
+    width: auto;
     background-color: #eee;
 }
 
 .right {
-    width: ;
-    padding: 0 10px 0 0;
-    float: right;
+    float: left;
+    width: 385px;
+    height: 100%;
+}
+
+.topright {
+    text-align: left;
+    vertical-align: middle;
+    background-color: #fff;
+    margin: 84px 20px 74px 50px;
+}
+
+.botright {
     background-color: #eee;
-    height: auto;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 20px 0px;
 }
 
 h1 {
@@ -135,16 +153,19 @@ h1 {
     font-size: 55px;
 }
 
-h2 {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    align-self: right;
+.suitcase {
+    display: block;
+    max-width: 100%;
+    max-height: auto;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    margin-right: 0px;
 }
 
-.suitcase {
-    max-width: auto;
-    max-height: 575px;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-right: 0px;
+.couch {
+    display: block;
+    max-width: 600px;
+    height: auto;
+    margin-top: 150px;
+    padding-bottom: 20px;
 }
