@@ -22,10 +22,12 @@ body {
 }
 
 .main {
-    diplay: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: 60vh;
+    grid-template-columns: 7em 2fr auto 2fr;
+    grid-template-areas: ". left middle right";
+    column-gap: 0px;
+    row-gap: 0px;
 }
 
 .navleft {
@@ -103,69 +105,58 @@ body {
     border-width: 1px;
     border-radius: 0;
     color: #000;
-    height: 30px;
-    width: 175px;
+    height: 40px;
+    width: 150px;
     padding: 3px, 60px, 3px, 60px; 
     margin-left: 15px;
     margin-bottom: 200px;
 }
 
 .left {
-    text-align: left;
-    padding: 100px 0px 0 115px;
-    float: left;
-    width: auto;
-    margin-right: 75px;
-    font-size: 14px;
-    background-color: #fff;
+    grid-area: left;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 3em;
+    padding: 
+    justify-content: space-between;
+    border: 1px solid green;
 }
 
 .middle {
+    grid-area: middle;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;  
+    flex-wrap: wrap;
     text-align: right;
-    padding: 0 0 75px 0;
-    float: left;
-    width: auto;
-    background-color: #eee;
+    justify-content: space-between;
+    border: 1px solid blue;
 }
 
 .right {
-    float: left;
-    width: 385px;
-    height: 100%;
-}
-
-.topright {
-    text-align: left;
-    vertical-align: middle;
-    background-color: #fff;
-    margin: 84px 20px 74px 50px;
-}
-
-.botright {
-    background-color: #eee;
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 20px 0px;
+    grid-area: right;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 2em;
+    justify-content: space-between;
+    border: 1px solid red;
 }
 
 h1 {
-    margin-top: 125px;
-    margin-bottom: 0px;
-    font-size: 55px;
+    margin-top: 3em;
+    margin-bottom: .5em;
+    font-size: 3.5em;
 }
 
 .suitcase {
     display: block;
-    max-width: 100%;
-    max-height: auto;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    margin-right: 0px;
 }
 
 .couch {
     display: block;
-    max-width: 600px;
-    height: auto;
-    margin-top: 150px;
-    padding-bottom: 20px;
+    margin-left: 2em;
 }
