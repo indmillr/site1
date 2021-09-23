@@ -8,24 +8,27 @@ body {
 }
 
 .nav {
+    grid-area: nav;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 16px;
     color: #000;
-    height: 125px;
     justify-content: space-between;
     align-items: center;
     border: none;
-    margin-bottom: 35px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .main {
     display: grid;
-    grid-template-rows: 60vh;
+    grid-template-rows: 5vh 60vh;
     grid-template-columns: 7em 2fr auto 2fr;
-    grid-template-areas: ". left middle right";
+    grid-template-areas: 
+    "nav nav nav nav"
+    ". left middle right";
     column-gap: 0px;
     row-gap: 0px;
 }
@@ -115,35 +118,28 @@ body {
 .left {
     grid-area: left;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 3em;
-    padding: 
     justify-content: space-between;
-    border: 1px solid green;
 }
 
 .middle {
     grid-area: middle;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;  
     flex-wrap: wrap;
     text-align: right;
     justify-content: space-between;
-    border: 1px solid blue;
 }
 
 .right {
     grid-area: right;
     display: flex;
-    flex-grow: 1;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-left: 2em;
+    padding: 7em 1em 0em 2em;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 h1 {
@@ -153,10 +149,35 @@ h1 {
 }
 
 .suitcase {
-    display: block;
+    height: auto;
+    width: auto;
 }
 
 .couch {
-    display: block;
-    margin-left: 2em;
+    height: auto;
+    width: auto;
+    margin-left: 5em;
+}
+
+.navleft {
+    grid-area: navleft;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        display: grid;
+        grid-template-columns: 5vh 5vh 15vh auto auto auto auto;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "navleft navright"
+        "navmid navmid"
+        "topleft topleft"
+        "botleft botleft"
+        "botright botright"
+        "topright topright"
+        "social social";
+        column-gap: 0px;
+        row-gap: 0px;
+    }
+
 }
