@@ -1,5 +1,5 @@
-function navMenu() {
-    var x = document.getElementById("myTopnav");
+function dropMenu() {
+    var x = document.getElementById("mytopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
     } else {
