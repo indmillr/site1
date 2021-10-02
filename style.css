@@ -274,9 +274,9 @@ h1 {
     display: block;
 }
 
-/* When screen <750px, hide all links and show open/close icon */
+/* When screen <780px, hide all links and show open/close icon */
 /* BEGIN MEDIA QUERY */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
     .navbar a,
     .dropdown .btn-drop {
         display:none;
@@ -290,9 +290,9 @@ h1 {
 }
 /* END MEDIA QUERY */
 
-/* Add 'responsive' class to navbar with JS onclick icon to display vertically when screen <750px */
+/* Add 'responsive' class to navbar with JS onclick icon to display vertically when screen <780px */
 /* BEGIN MEDIA QUERY */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
     .navbar.responsive {
         position: relative;
     }
@@ -332,7 +332,7 @@ h1 {
 
 
 /* MEDIA QUERY for WEB-SIZE Response*/
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 780px) {
 
 /* Set up grid layout for main container */
     .container {
