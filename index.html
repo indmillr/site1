@@ -1,79 +1,76 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>idmillr bio project</title>
-        <link rel="stylesheet" href="style.css"></style>
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="nav-logo">
-                <img class="logo" src="images/logo.png" alt="Company Logo">
-            </div>
-            <div class="nav-menu">
-                <input type="button" class="btn btn-small btn-login" value="">
-                <input type="button" class="btn btn-small btn-search" value="">
-                <input type="button" class="btn btn-sell" value="SELL AT AUCTION">
-                <input type="button" class="btn btn-gridmenu" value="">
-            </div>
-            <div class="nav-bar">
-                <ul id="menu">
-                    <li><a href="#">Auctions Ending Today</a></li>
-                    <li>
-                        <a href="#">Exceptional Products +</a>
-                        <ul class="hidden">
-                            <li><a href="#">Product ONE</a></li>
-                            <li><a href="#">Product TWO</a></li>
-                            <li><a href="#">Product THREE</a></li>
-                            <li><a href="#">Product FOUR</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">FAQ's +</a>
-                        <ul class="hidden">
-                            <li><a href="#">FAQ Item ONE</a></li>
-                            <li><a href="#">FAQ Item TWO</a></li>
-                            <li><a href="#">FAQ Item THREE</a></li>
-                            <li><a href="#">FAQ Item FOUR</a></li>
-                            <li><a href="#">FAQ Item FIVE</a></li>
-                            <li><a href="#">FAQ Item SIX</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="main-left">
-                Always Find The Best Deals!
-                <h1>BID &<br>SEIZE DEAL</h1>
-                <input type="button" class="btn btn-bid" value="START BIDDING">
-            </div>
-            <div class="text-block">
-                <p>
-                    BinQasem welcomes many millions of visitors from all over the world every month.
-                    Our organisation therefore has a strong international focus, with employees from all
-                    over Europe. Our offices are location in the middle east.
-                </p>
-            </div>
-            <div class="img-main">
-                <img src="images/suitcase.png" class="suitcase">
-            </div>
-            <div class="contact">
-                <img src=""> For Queries: <a href="#">info@androomedia.net</a><br>
-                <img src=""> For Call: 920012888
-            </div>
-            <div class="social">
-                <a href="">Facebook</a>
-                <a href="">Instagram</a>
-                <a href="">Twitter</a>
-                <a href="">Snapchat</a>
-            </div>
-            <div class="img-side">
-                <img src="images/couch.png" alt="couch image" class="couch">
-            </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Site 1</title>
+    <link rel="stylesheet" href="style.css"></style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-logo">
+            <img class="logo" src="images/logo.png" alt="Company Logo">
         </div>
-    </body>
+        <div class="navbar" id="navbar">
+            <a href="#">Auctions Ending Today</a>
+            <div class="dropdown">
+                <button class="btn-drop">Exceptional Products +</button>
+                <div class="dropdown-content">
+                    <a href="#">Product ONE</a>
+                    <a href="#">Product TWO</a>
+                    <a href="#">Product THREE</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="btn-drop">FAQ's +</button>
+                <div class="dropdown-content">
+                    <a href="#">FAQ Item ONE</a>
+                    <a href="#">FAQ Item TWO</a>
+                    <a href="#">FAQ Item THREE</a>
+                    <a href="#">FAQ Item FOUR</a>
+                    <a href="#">FAQ Item FIVE</a>
+                </div>
+            </div>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="javascript:void(0);" class="icon" onclick="dropMenu()">&#9776;</a>
+        </div>
+        <div class="main-left">
+            Always Find The Best Deals!
+            <h1>BID &<br>SEIZE DEAL</h1>
+            <input type="button" class="btn btn-bid" value="START BIDDING">
+        </div>
+        <div class="text-block">
+            <p>
+                BinQasem welcomes many millions of visitors from all over the world every month.
+                Our organisation therefore has a strong international focus, with employees from all
+                over Europe. Our offices are location in the middle east.
+            </p>
+        </div>
+        <div class="nav-menu">
+            <input type="button" class="btn btn-small btn-login" value="">
+            <input type="button" class="btn btn-small btn-search" value="">
+            <input type="button" class="btn btn-sell" value="SELL AT AUCTION">
+            <input type="button" class="btn btn-gridmenu" value="">
+        </div>
+        <div class="img-main">
+            <img src="images/suitcase.png" class="suitcase">
+        </div>
+        <div class="contact">
+            <img src=""> For Queries: <a href="#">info@androomedia.net</a><br>
+            <img src=""> For Call: 920012888
+        </div>
+        <div class="social">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">Twitter</a>
+            <a href="">Snapchat</a>
+        </div>
+        <div class="img-side">
+            <img src="images/couch.png" alt="couch image" class="couch">
+        </div>
+    </div>
+</body>
 </html>
