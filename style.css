@@ -1,7 +1,7 @@
+/* Define root variables */
 :root {
     --background: rgba(255, 255, 255, 1);
-    --color: #000;
-    --acolor: #000;
+    --color: rgba(0, 0, 0, 1);
     --shaded: rgba(134, 121, 2, 0.699);
 }
 
@@ -11,6 +11,7 @@ body {
     font-size: 1.125em;
 }
 
+/* Set global links styles */
 a {
     text-decoration: none;
     color: var(--acolor);
@@ -21,12 +22,15 @@ a:hover {
 }
 
 
-/* BUTTONS */
 
+
+
+
+/* BUTTONS */
 .btn {
     cursor: pointer;
     align-content: center;
-   vertical-align: middle;
+    vertical-align: middle;
 }
 
 .btn-small {
@@ -85,76 +89,89 @@ a:hover {
 
 
 
-/* MOBILE STYLING */
 
+
+/* MAIN LAYOUT and CONTENT POSITIONING */
+
+/* 'Bid & Seize' tagline */
 h1 {
     font-size: 2em;
     margin-top: 1em;
 }
 
-.main-left {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
-
-.contact {
-    margin: 1em 0;
-}
-
-.social {
-    margin: 1em 0;
-}
-
-.nav-menu {
-    display: flex;
-    padding-top: 1.5em;
-    padding-bottom: .5em;
-    justify-content: space-evenly;
-}
-
-.nav-logo {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-.logo {
-    max-width: 100%;
-    height: auto;
-    align-self: center;
-    justify-self:
-}
-
+/* Position large left column */
 .main-left {
     display: flex;
     font-size: 1.5em;
-    margin-top: 3em;
+    margin-top: .5em;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding: 0;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
 }
 
-.text-block {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 1em;
-    margin-right: 1em;
-    font-size: 1.125em;
-}
-
+/* Position Contact Info */
 .contact {
+    margin: 1em 0;
     font-size: 1.25em;
     text-align: center;
 }
 
+/* Position Social Media links */
 .social {
+    margin: 1em 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+/* Position search/login/sell/menu items */
+.nav-menu {
+    display: flex;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    justify-content: space-evenly;
+}
+
+/* Position company logo */
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+/* Position and format Text Block */
+.text-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 1em;
+    padding: 0;
+    font-size: 1.125em;
+}
+
+
+
+
+
+
+/* IMAGES */
+
+/* Format main (large) image */
+.suitcase {
+    min-width: 100%;
+    height: auto;
+}
+
+/* Format company logo image */
+.logo {
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    padding-bottom: 1em;
+}
 
 /* Remove small image div for mobile screens */
 .img-side {
@@ -164,18 +181,150 @@ h1 {
 
 
 
-/* IMAGE STYLING */
-.suitcase {
-    min-width: 100%;
-    height: auto;
+
+
+/* NAVIGATION BAR */
+
+/* Add background color to navbar */
+.navbar {
+    background-color: var(--background);
 }
 
+/* Position logo image */
 .logo {
-    max-width: 100%;
-    height: auto;
-    align-self: flex-start;
-    margin-left: 1em;
+    display: block;
+    float: left;
 }
+
+/* Style the links inside navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: var(--color);
+    text-align: center;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 1.125em;
+}
+
+/* Add 'active' class to highlight current page */
+.active {
+    background-color: var(--shaded);
+    color: var(--color);
+}
+
+/* Hide open/close icon (only needs visibility on small screens) */
+.navbar .icon {
+    display: none;
+}
+
+/* Position dropdown content via 'dropdown' container DIV */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Style dropdown button to fit inside navbar */
+.dropdown .btn-drop {
+    font-size: 1.125em;
+    border: none;
+    outline: none;
+    color: var(--color);
+    padding: 10px 25px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Style dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--background);
+    min-width: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Style links inside dropdown */
+.dropdown-content a {
+    float: none;
+    color: var(--color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Style 'hover' for navbar links and drop btn */
+.navbar a:hover,
+.dropdown:hover .btn-drop {
+    color: var(--shaded);
+    background-color: var(--background);
+}
+
+/* Add background on navbar links and drop btn on hover */
+.navbar a:hover,
+.dropdown:hover .btn-drop {
+    background-color: var(--background);
+}
+
+/* Show dropdown menu onmouseover dropdown btn */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* When screen <750px, hide all links and show open/close icon */
+/* BEGIN MEDIA QUERY */
+@media screen and (max-width: 750px) {
+    .navbar a,
+    .dropdown .btn-drop {
+        display:none;
+    }
+    .navbar a.icon {
+        float: right;
+        display: block;
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
+}
+/* END MEDIA QUERY */
+
+/* Add 'responsive' class to navbar with JS onclick icon to display vertically when screen <750px */
+/* BEGIN MEDIA QUERY */
+@media screen and (max-width: 750px) {
+    .navbar.responsive {
+        position: relative;
+    }
+    
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .navbar.responsive .dropdown {
+        float: none;
+    }
+
+    .navbar.responsive .dropdown-content {
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .navbar.responsive .dropdown .btn-drop {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+/* END MEDIA QUERY */
 
 
 
@@ -183,228 +332,149 @@ h1 {
 
 
 /* MEDIA QUERY for WEB-SIZE Response*/
-@media (min-width: 760px) {
+@media screen and (min-width: 760px) {
 
+/* Set up grid layout for main container */
+    .container {
+        display: grid;
+        grid-template-columns: 5em 2fr 3fr 2fr;
+        grid-template-rows: 9em 2fr 3fr 5em;
+        gap: 0px;
+    }
 
-a:hover {
-    text-decoration: none;
-    color: var(--shaded);
-}
+/* Positioning responsive navbar */
+    .navbar {
+        grid-row: 1 / 2;
+        grid-column: 2 / 4;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-top: 1em;
+        width: 100%;
+        margin-right: none;
+        margin-left: 0;
+    }
 
+/* Positioning company logo */    
+    .nav-logo {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        display: flex;
+        margin-top: 1em;
+        margin-left: 1em;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
 
-/* MAIN CONTAINER */
+/* Positioning search/login/sell/menu buttons */
+    .nav-menu {
+        grid-row: 1 / 2;
+        grid-column: 4 / 5;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-top: 1.25em;
+        margin-left: 7em;
+        margin-right: 1em;
+        justify-content: space-around;
+    }
+    
+    
+    
+/* Adjust 'Bid & Seize' tagline text */
+    h1 {
+        font-size: 3em;
+    }
+    
+/* Positioning 'Bid & Seize' tagline section */    
+    .main-left {
+        margin-top: 2em;
+        grid-row: 2 / 4;
+        grid-column: 2 / 3;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        flex-direction: column;
+        align-self: center;
+        font-size: 1em;
+    }
 
-.container {
-    display: grid;
-    grid-template-columns: 5em 2fr 3fr 2fr;
-    grid-template-rows: 9em 2fr 3fr 5em;
-    gap: 0px;
-}
+/* Positioning and sizing text block area */    
+    .text-block {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+        display: flex;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        align-self: center;
+        margin-left: 2.5em;
+        margin-right: 1em;
+        line-height: 1.25;
+    }
+    
+/* Positioning main/large image */
+    .img-main {
+        grid-row: 2 / 4;
+        grid-column: 3 / 4;
+        justify-self: end;
+        display: flex;
+        flex-grow: 1;
+    }
 
-/* NAVIGATION MENU */
+/* Positioning small side image */    
+    .img-side {
+        grid-row: 3 / 5;
+        display: flex;
+        flex-grow: 1;
+        grid-column: 4 / 5;
+        justify-self: end;
+        align-self: end;
+    }
+ 
+/* Positioning and styling contact info */    
+    .contact {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        align-self: center;
+        line-height: 2;
+        font-size: 1em;
+        text-align: left;
+    }
+    
+/* Positioning and styling social media links */
+    .social {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        margin-left: 50%;
+        font-size: 1em;
+        align-self: center;
+        justify-content: space-around;
+        color: var(--color);
+    }
 
-/* Remove UL padding and default list styling */
-ul {
-    list-style-type: none;
-    margin-top: 1em;
-    padding: 0;
-    position: absolute;
-}
-
-/* Create horizontal list wtih spacing */
-li {
-    display: inline-block;
-}
-
-/* Style for Menu links */
-li a {
-    display: flex;
-    padding-left: 20px;
-    flex-wrap: wrap;
-    text-align: right;
-    flex-grow: 1;
-    height: auto;
-    color: var(--color);
-    background-color: var(--background);
-}
-
-/* Hover state for top-level links */
-li:hover a {
-    color: var(--shaded);
-}
-
-/* Style for dropdown links */
-li:hover ul a {
-    background: var(--shaded);
-    color: var(--color);
-    height: auto;
-    line-height: 1.75em;
-}
-
-/* Hover state for dropdown links */
-li:hover ul a:hover {
-    background: var(--shaded);
-    color: var(--background);
-}
-
-/* Hide dropdown links until needed */
-li ul {
-    display: none;
-}
-
-/* Make dropdown links vertical */
-li ul li {
-    display: block;
-}
-
-/* Prevent text-wrapping */
-li ul li a {
-    width: auto;
-    min-width: 100px;
-    padding: 0 15px;
-}
-
-/* Display dropdown on hover */
-ul li a:hover + .hidden,
-.hidden:hover {
-    display: block;
-}
-
-
-
-
-/* NAVIGATION DIVS*/
-
-.nav-bar {
-    grid-row: 1 / 2;
-    grid-column: 2 / 4;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    width: 100%;
-    margin-top: 2em;
-    margin-right: none;
-    margin-left: 0;
-}
-
-.nav-logo {
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    margin-top: 2em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-}
-
-.nav-menu {
-    grid-row: 1 / 2;
-    grid-column: 4 / 5;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin-top: 1em;
-    margin-left: 7em;
-    margin-right: 1em;
-    justify-content: space-around;
-}
-
-
-
-/* MAIN CONTENT DIVS */
-h1 {
-    font-size: 3em;
-}
-
-
-.main-left {
-    margin-top: 2em;
-    grid-row: 2 / 4;
-    grid-column: 2 / 3;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    flex-direction: column;
-    align-self: center;
-    font-size: 1em;
-}
-
-.text-block {
-    grid-row: 2 / 3;
-    grid-column: 4 / 5;
-    display: flex;
-    flex-grow: 1;
-    flex-wrap: wrap;
-    align-self: center;
-    margin-left: 2.5em;
-    margin-right: 1em;
-    line-height: 1.25;
-}
-
-
-
-/* IMAGE DIV CONTAINERS */
-
-.img-main {
-    grid-row: 2 / 4;
-    grid-column: 3 / 4;
-    justify-self: end;
-    display: flex;
-    flex-grow: 1;
-}
-
-.img-side {
-    grid-row: 3 / 5;
-    display: flex;
-    flex-grow: 1;
-    grid-column: 4 / 5;
-    justify-self: end;
-    align-self: end;
-}
-
-
-
-/* FOOTER DIVS */
-
-.contact {
-    grid-row: 4 / 5;
-    grid-column: 2 / 3;
-    align-self: center;
-    line-height: 2;
-    font-size: 1em;
-    text-align: left;
-}
-
-.social {
-    grid-row: 4 / 5;
-    grid-column: 3 / 4;
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    margin-left: 50%;
-    font-size: 1em;
-    align-self: center;
-    justify-content: space-around;
-    color: var(--shaded);
-}
-
-
-
-/* IMAGES */
-
-.suitcase {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.couch {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
 
 
 
 
 
-} /* END OF MEDIA QUERY */
+/* IMAGES */
+    
+/* Adding responsiveness to main/large image */
+    .suitcase {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+ 
+/* Adding responsiveness to side/small image */    
+    .couch {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+} 
+/* END OF MEDIA QUERY */
