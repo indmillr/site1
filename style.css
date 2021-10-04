@@ -114,7 +114,10 @@ h1 {
 /* Position Contact Info */
 .contact {
     margin: 1em 0;
+    display: flex;
+    flex-direction: column;
     font-size: 1.25em;
+    width: 100%;
     text-align: center;
 }
 
@@ -176,6 +179,13 @@ h1 {
 /* Remove small image div for mobile screens */
 .img-side {
     display: none;
+}
+
+/* Format both contact images */
+.contact-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 
