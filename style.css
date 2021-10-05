@@ -183,8 +183,8 @@ h1 {
 
 /* Format both contact images */
 .contact-img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
 }
 
@@ -243,6 +243,7 @@ h1 {
     padding: 10px 25px;
     background-color: inherit;
     font-family: inherit;
+    cursor: pointer;
     margin: 0;
 }
 
@@ -447,9 +448,17 @@ h1 {
         grid-row: 4 / 5;
         grid-column: 2 / 3;
         align-self: center;
-        line-height: 2;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
         font-size: 1em;
         text-align: left;
+    }
+
+/* Styling contact info into two rows */
+    .contact ul {
+        list-style-type: none;
+        line-height: 1.75em;
     }
     
 /* Positioning and styling social media links */
