@@ -1,341 +1,97 @@
-/* Define root variables */
-:root {
-    --background: rgba(255, 255, 255, 1);
-    --color: rgba(0, 0, 0, 1);
-    --shaded: rgba(134, 121, 2, 1);
-    --bqblue: rgba(25, 83, 154, 1);
-}
-
-body {
-    background-color: var(--background);
-    color: var(--color);
-    font-size: 1.125em;
-}
-
-/* Set global links styles */
-a {
-    text-decoration: none;
-    color: var(--acolor);
-} 
-
-a:hover {
-    color: var(--shaded);
-}
-
-
-
-
-
-
-/* BUTTONS */
-.btn {
-    cursor: pointer;
-    align-content: center;
-    vertical-align: middle;
-}
-
-.btn-small {
-    width: 18px;
-    height: 18px;
-    border: none;
-}
-
-.btn-login {
-    background: url('images/login.png') no-repeat;
-}
-
-.btn-search {
-    background: url('images/search.png') no-repeat;
-}
-
-.btn-gridmenu {
-    background: url('images/gridmenu.png') no-repeat;
-    width: 16px;
-    height: 16px;
-    border: none;
-    align-content: center;
-    vertical-align: middle;
-}
-
-.btn-sell {
-    background-color: var(--background);
-    border: solid;
-    border-color: #ccc;
-    font-size: .75em;
-    font-weight: bolder;
-    border-width: 1px;
-    border-radius: 0;
-    color: var(--color);
-    height: 25px;
-    width: 150px;
-    padding: 2px, 40px, 2px, 40px;
-}
-
-
-
-
-
-
-/* IMAGES  */
-
-/* Format contact (footer) images */
-.contact-img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-/* Format company logo image */
-.logo {
-    max-width: 100%;
-    height: auto;
-    align-self: center;
-    padding-bottom: 1em;
-}
-
-
-
-
-
-
-/* Position search/login/sell/menu items */
-.nav-menu {
-    display: flex;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    justify-content: space-evenly;
-}
-
-/* Position company logo */
-.nav-logo {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-
-
-
-
-
-/* NAVIGATION BAR */
-
-/* Add background color to navbar */
-.navbar {
-    background-color: var(--background);
+header {
+    height: 150px;
+    position: relative;
+    background-color: silver;
 }
 
-/* Position logo image */
-.logo {
-    display: block;
-    float: left;
-}
-
-/* Style the links inside navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: var(--color);
-    text-align: center;
-    padding: 10px 25px;
-    text-decoration: none;
-    font-size: 1.125em;
-}
-
-/* Add 'active' class to highlight current page */
-.active {
-    background-color: var(--shaded);
-    color: var(--color);
-}
-
-/* Hide open/close icon (only needs visibility on small screens) */
-.navbar .icon {
-    display: none;
-}
-
-/* Position dropdown content via 'dropdown' container DIV */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-/* Style dropdown button to fit inside navbar */
-.dropdown .btn-drop {
-    font-size: 1.125em;
-    border: none;
-    outline: none;
-    color: var(--color);
-    padding: 10px 25px;
-    background-color: inherit;
-    font-family: inherit;
-    cursor: pointer;
-    margin: 0;
-}
-
-/* Style dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
+.overlay {
     position: absolute;
-    background-color: var(--background);
-    min-width: 16px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* Style links inside dropdown */
-.dropdown-content a {
-    float: none;
-    color: var(--color);
-    padding: 12px 16px;
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+nav li span {
+    padding-left: 5px;
+}
+
+li a {
+    padding: 5px;
+    background-color: white;
     text-decoration: none;
-    display: block;
-    text-align: left;
 }
 
-/* Style 'hover' for navbar links and drop btn */
-.navbar a:hover,
-.dropdown:hover .btn-drop {
-    color: var(--shaded);
-    background-color: var(--background);
+.cart ion-icon {
+    vartical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
 }
 
-/* Add background on navbar links and drop btn on hover */
-.navbar a:hover,
-.dropdown:hover .btn-drop {
-    background-color: var(--background);
+.cart a {
+    background-color: royalblue;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-/* Show dropdown menu onmouseover dropdown btn */
-.dropdown:hover .dropdown-content {
-    display: block;
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding-bottom: 100px;
 }
 
-
-/* Add 'responsive' class to navbar with JS onclick icon to display vertically when screen <780px */
-/* BEGIN MEDIA QUERY */
-@media screen and (max-width: 780px) {
-    .navbar.responsive {
-        position: relative;
-    }
-    
-    .navbar.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .navbar.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .navbar.responsive .dropdown {
-        float: none;
-    }
-
-    .navbar.responsive .dropdown-content {
-        position: relative;
-        padding-left: 20px;
-    }
-
-    .navbar.responsive .dropdown .btn-drop {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 100px;
+    width: 75px;
+    border: 1px solid black;
 }
-/* END MEDIA QUERY */
 
+.add-cart {
+    position: absolute;
+    width: 100%;
+    background-color: darkgray;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}
 
-
-
-
-
-/* MEDIA QUERY for WEB-SIZE Response*/
-@media screen and (min-width: 780px) {
-
-/* Set up grid layout for main container */
-        .container {
-            display: grid;
-            grid-template-columns: 2.5% 60% 35% 2.5%;
-            grid-template-rows: 9em 10em 40em 9em;
-            gap: 10px;
-        }
-
-/* Position and responsiveness for NAV */
-        .nav {
-            grid-column: 1 / 5;
-            grid-row: 1 / 2;
-            display: flex;
-            flex: 1 1 auto;
-        }
-
-/* Position and responsiveness for HEADER */       
-        .header {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            display: flex;
-            flex: 1 1 auto;
-            background-color: var(--shaded);
-            color: var(--background);
-            border-radius: 20px;
-            justify-content:center;
-            margin: 0 5em;
-            padding: 2em 0;
-        }
-
-/* Position and responsiveness for CATALOG */        
-        .catalog {
-            grid-column: 2 / 3;
-            grid-row: 3 / 4;
-            display: flex;
-            flex: 1 1 auto;
-            background-color: var(--background);
-            color: var(--color);
-            justify-content: center;
-            margin: 0;
-            padding: 2em 0;
-            border: 1px var(--bqblue) dashed;
-            border-radius: 20px;
-        }
-
-/* Position and responsiveness for SHOPPING CART */        
-        .shopping-cart {
-            grid-column: 3 / 4;
-            grid-row: 2 / 4;
-            display: flex;
-            flex: 1 1 auto;
-            background-color: var(--bqblue);
-            color: var(--background);
-            justify-content: center;
-            border-radius: 20px;
-            margin: 0;
-            padding: 2em 0;
-        }
-
-/* Position and responsiveness for FOOTER */        
-        .footer {
-            grid-column: 1 / 5;
-            grid-row: 4 / 5;
-            display: flex;
-            flex: 1 1 auto;
-        }
-
-        .contact {
-            display: flex;
-        }
-
-        .contact ul {
-            list-style-type: none
-        }
-
-        .social {
-            display: flex;
-        }
-
-        .social ul {
-            list-style-type: none;
-        }
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}

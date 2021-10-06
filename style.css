@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 /* Define root variables */
 :root {
     --background: rgba(255, 255, 255, 1);

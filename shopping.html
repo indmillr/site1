@@ -3,68 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>idmillr: Shopping Cart</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style2.css"></style>
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav">
-            <div class="nav-logo">
-                <a href="index.html" target="_self"><img class="logo" src="images/logo.png" alt="Company Logo"></a>
-            </div>
-            <div class="navbar" id="navbar">
-                <a href="shopping.html" target="_self">Auctions Ending Today</a>
-                <div class="dropdown">
-                    <button class="btn-drop">Exceptional Products +</button>
-                    <div class="dropdown-content">
-                        <a href="shopping.html" target="_self">Product ONE</a>
-                        <a href="shopping.html" target="_self">Product TWO</a>
-                        <a href="shopping.html" target="_self">Product THREE</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="btn-drop">FAQ's +</button>
-                    <div class="dropdown-content">
-                        <a href="#" target="_self">FAQ Item ONE</a>
-                        <a href="#" target="_self">FAQ Item TWO</a>
-                        <a href="#" target="_self">FAQ Item THREE</a>
-                        <a href="#" target="_self">FAQ Item FOUR</a>
-                        <a href="#" target="_self">FAQ Item FIVE</a>
-                    </div>
-                </div>
-                <a href="index.html" target="_self">About Us</a>
-                <a href="mailto:theiandmiller@gmail.com">Contact Us</a>
-                <a href="javascript:void(0);" class="icon" onclick="dropMenu()">&#9776;</a>
-            </div>
-            <div class="nav-menu">
-                <input type="button" class="btn btn-small btn-login" value="">
-                <input type="button" class="btn btn-small btn-search" value="">
-                <input type="button" class="btn btn-sell" value="SELL AT AUCTION">
-                <input type="button" class="btn btn-gridmenu" value="">
-            </div>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>SHOP</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
+    </header>
 
-        <div class="header">HEADER</div>
-        <div class="catalog">CATALOG</div>
-        <div class="shopping-cart">SHOPPING CART</div>
-        
-        <footer class="footer">
-            <div class="contact">
-                <ul>
-                    <li><img src="images/sendmail.png" class="contact-img" alt="Contact by Email "> For Queries: <a href="mailto:theiandmiller@gmail.com">info@androomedia.net</a></li>
-                    <li><img src="images/call.png" class="contact-img" alt="Contact by Phone icon"> For Call: 920012888</li>    
-                </ul>
-            </div>
-            <div class="social">
-                <ul>
-                    <li><a href="#" target="_new">Facebook</a></li>
-                    <li><a href="#" target="_new">Instagram</a></li>
-                    <li><a href="#" target="_new">Twitter</a></li>
-                    <li><a href="#" target="_new">Snapchat</a></li>
-                </ul>
-            </div>
-        </footer>
+    <div class="container">
+        <div class="image">
+            <img src="" alt="">
+            <h3>Item ONE</h3>
+            <h3>$15.00</h3>
+            <a class="add-cart cart1" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img src="" alt="">
+            <h3>Item ONE</h3>
+            <h3>$20.00</h3>
+            <a class="add-cart cart2" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img src="" alt="">
+            <h3>Item ONE</h3>
+            <h3>$10.00</h3>
+            <a class="add-cart cart3" href="#">Add Cart</a>
+        </div>
+        <div class="image">
+            <img src="" alt="">
+            <h3>Item ONE</h3>
+            <h3>$25.00</h3>
+            <a class="add-cart cart4" href="#">Add Cart</a>
+        </div>
     </div>
+
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
