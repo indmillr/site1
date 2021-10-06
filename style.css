@@ -2,7 +2,7 @@
 :root {
     --background: rgba(255, 255, 255, 1);
     --color: rgba(0, 0, 0, 1);
-    --shaded: rgba(134, 121, 2, 0.699);
+    --shaded: rgba(134, 121, 2, 1);
 }
 
 body {

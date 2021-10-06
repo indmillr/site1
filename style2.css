@@ -2,7 +2,8 @@
 :root {
     --background: rgba(255, 255, 255, 1);
     --color: rgba(0, 0, 0, 1);
-    --shaded: rgba(134, 121, 2, 0.699);
+    --shaded: rgba(134, 121, 2, 1);
+    --bqblue: rgba(25, 83, 154, 1);
 }
 
 body {
@@ -278,8 +279,9 @@ a:hover {
             grid-row: 2 / 3;
             display: flex;
             flex: 1 1 auto;
-            background-color: blue;
+            background-color: var(--shaded);
             color: var(--background);
+            border-radius: 20px;
             justify-content:center;
             margin: 0 5em;
             padding: 2em 0;
@@ -291,11 +293,13 @@ a:hover {
             grid-row: 3 / 4;
             display: flex;
             flex: 1 1 auto;
-            background-color: green;
-            color: var(--background);
+            background-color: var(--background);
+            color: var(--color);
             justify-content: center;
             margin: 0;
             padding: 2em 0;
+            border: 1px var(--bqblue) dashed;
+            border-radius: 20px;
         }
 
 /* Position and responsiveness for SHOPPING CART */        
@@ -304,9 +308,10 @@ a:hover {
             grid-row: 2 / 4;
             display: flex;
             flex: 1 1 auto;
-            background-color: var(--color);
+            background-color: var(--bqblue);
             color: var(--background);
             justify-content: center;
+            border-radius: 20px;
             margin: 0;
             padding: 2em 0;
         }
