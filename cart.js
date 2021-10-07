@@ -63,6 +63,13 @@ function setItems(product) {
     console.log("My cart items are", cartItems);
 
     if(cartItems != null) {
+
+        if (cartItems[product.tag] == undefined) {
+            cartItems = {
+                ...cartItems,
+                [product.tag]: product
+            }
+        }
         cartItems[product.tag].inCart += 1;
     } else {
         product.inCart = 1;    
