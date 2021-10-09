@@ -2,27 +2,33 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [
     {
-        name: 'Grey Tshirt',
-        tag: 'greytshirt',
+        name: 'Item One',
+        tag: 'itemONE',
         price: 15,
         inCart: 0
     },
     {
-        name: 'Grey Hoodie',
-        tag: 'greyhoodie',
+        name: 'Item Two',
+        tag: 'itemTWO',
         price: 20,
         inCart: 0
     },
     {
-        name: 'Black Tshirt',
-        tag: 'blacktshirt',
+        name: 'Item Three',
+        tag: 'itemTHREE',
         price: 10,
         inCart: 0
     },
     {
-        name: 'Black Hoodie',
-        tag: 'blackhoodie',
+        name: 'Item Four',
+        tag: 'itemFOUR',
         price: 25,
+        inCart: 0
+    },
+    {
+        name: 'Item Five',
+        tag: 'itemFIVE',
+        price: 5,
         inCart: 0
     }
 ]
@@ -104,15 +110,12 @@ function displayCart() {
         Object.values(cartItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
-                <ion-icon name="close-circle"></ion-icon>
-                <img src="./images/${item.tag}.jpg">
+                <img src="/images/${item.tag}.png">
                 <span>${item.name}</span>
             </div>
             <div class="price">$${item.price}.00</div>
             <div class="quantity">
-                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
                 <span>${item.inCart}</span>
-                <ion-icon class="increase " name="arrow-dropright-circle"></ion-icon>
             </div>
             <div class="total">
                 $${item.inCart * item.price}.00
@@ -130,6 +133,8 @@ function displayCart() {
                 </h4>
         `;
     }
+
+
 }
 
 onLoadCartNumbers();
