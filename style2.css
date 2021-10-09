@@ -5,10 +5,37 @@
     font-family: sans-serif;
 }
 
+/* Define root variables */
+:root {
+    --background: rgba(255, 255, 255, 1);
+    --color: rgba(0, 0, 0, 1);
+    --shaded: rgba(134, 121, 2, 1);
+    --bqblue: rgba(24, 82, 156, 1);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--color);
+    font-size: 1.125em;
+}
+
+/* Set global links styles */
+a {
+    text-decoration: none;
+    color: var(--acolor);
+} 
+
+a:hover {
+    color: var(--shaded);
+}
+
+
 header {
-    height: 150px;
+    height: 9em;
+    display: flex;
+    flex-grow: 1;
     position: relative;
-    background-color: silver;
+    background-color: var(--background);
 }
 
 .overlay {
@@ -21,6 +48,13 @@ header {
     bottom: 0;
     padding: 0 !important;
     margin: 0 !important;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: flex;
+    flex-grow: 1;
+    justify-items: space-around;
 }
 
 nav {
@@ -46,7 +80,7 @@ li a {
 }
 
 .cart a {
-    background-color: royalblue;
+    background-color: var(--bqblue);
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -64,6 +98,7 @@ li a {
 .image {
     margin-right: 20px;
     margin-left: 20px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
     max-width: 300px;
