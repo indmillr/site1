@@ -45,12 +45,6 @@ li a {
     text-decoration: none;
 }
 
-.cart ion-icon {
-    vartical-align: bottom;
-    font-size: 20px;
-    padding-right: 5px;
-}
-
 .cart a {
     background-color: royalblue;
     color: white;
@@ -72,8 +66,8 @@ li a {
     margin-left: 20px;
     position: relative;
     overflow: hidden;
-    height: 100px;
-    width: 75px;
+    max-width: 300px;
+    height: auto;
     border: 1px solid black;
 }
 
