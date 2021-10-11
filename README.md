@@ -3,3 +3,4 @@ A project: Adapting an image of an ecommerce site concept into a functional mock
 
 ## Goals:
 -- replicating layout of an existing website image <br>
+-- add a shopping cart function to this mock ecommerce site
