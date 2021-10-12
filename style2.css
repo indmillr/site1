@@ -104,15 +104,6 @@ nav {
 
 /* --------------- SHOPPING PAGE --------------- */
 
-
-/* Controls for product/item images */
-.item-image {
-    max-width: 300px;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
 /* Layout of product image within the cart area */
 .image {
     margin-right: 20px;
