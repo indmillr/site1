@@ -91,14 +91,9 @@ nav {
     background-color: white;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 4em 2em 4em;
+    margin: 0 20px 20px 20px;
     padding: 1em;
     border-radius: 15px;
-}
-
-.logo {
-    margin: 0px;
-    padding: 0px;
 }
 
 .image {
