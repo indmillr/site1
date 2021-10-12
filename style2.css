@@ -52,13 +52,6 @@ header {
     margin: 0 !important;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-grow: 1;
-    justify-items: space-around;
-}
-
 h1 {
     text-align: center;
     margin-top: 1em;
@@ -78,21 +71,12 @@ nav {
     padding: 50px 60px 0 60px;
 }
 
-nav li span {
-    padding-left: 5px;
-}
-
-li a {
-    padding: 5px;
-    background-color: var(--background);
-    text-decoration: none;
-}
-
 .cart a {
     background-color: var(--bqblue);
     color: white;
     cursor: pointer;
     padding: .5em 1em;
+    margin: 0px;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -101,7 +85,6 @@ li a {
     background-color: white;
 }
 
-
 .container,
 .products-container {
     display: flex;
@@ -109,10 +92,14 @@ li a {
     justify-content: center;
     flex-wrap: wrap;
     margin: 0 4em 2em 4em;
-    padding-top: 1em;
+    padding: 1em;
     border-radius: 15px;
 }
 
+.logo {
+    margin: 0px;
+    padding: 0px;
+}
 
 .image {
     margin-right: 20px;
@@ -159,8 +146,7 @@ li a {
 
 .products-container {
     max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
+    margin: 1em auto;
     margin-top: 50px;
 }
 
