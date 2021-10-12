@@ -23,7 +23,7 @@ body {
 a {
     text-decoration: none;
     color: var(--acolor);
-} 
+}
 
 a:hover {
     color: var(--shaded);
@@ -50,11 +50,15 @@ header {
     margin: 0 !important;
 }
 
-nav ul li {
+nav ul {
     list-style-type: none;
     display: flex;
     flex-grow: 1;
     justify-items: space-around;
+}
+
+h1 {
+    text-align: center;
 }
 
 nav {
@@ -75,15 +79,16 @@ nav li span {
 
 li a {
     padding: 5px;
-    background-color: white;
+    background-color: var(--background);
     text-decoration: none;
 }
 
 .cart a {
     background-color: var(--bqblue);
-    color: white;
+    color: var(--background);
     cursor: pointer;
     text-decoration: none;
+    border-radius: 10px;
 }
 
 .container,
@@ -103,16 +108,26 @@ li a {
     overflow: hidden;
     max-width: 300px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--color);
 }
 
+.image a {
+    font-size: 1.2em;
+}
+
+.image a:hover {
+    font-weight: bolder;
+    color: var(--color);
+}
+
+/* 'Add to Cart' pop-up button for Auction Items */
 .add-cart {
     position: absolute;
     width: 100%;
-    background-color: darkgray;
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
+    background-color: var(--background);
+    transition: all 0s ease-in-out;
     cursor: pointer;
+    border-top: var(--color) dotted 1px;
     text-align: center;
 }
 
@@ -121,7 +136,7 @@ li a {
 .image:hover .cart3,
 .image:hover .cart4 {
     bottom: 50px;
-    opacity: 1;
+    opacity: 50%;
     padding: 10px;
     text-decoration: none;
 }
@@ -135,44 +150,38 @@ li a {
     margin-top: 50px;
 }
 
-.products-container ion-icon {
-    font-size: 25px;
-    color: blue;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-
 .product-header {
     width: 100%;
     max-width: 650px;
+    text-align: center;
     display: flex;
-    justify-content: flex-start;
-    border-bottom: 4px solid lightgrey;
+    justify-content: center;
+    border-bottom: 2px solid var(--bqblue);
     margin: 0 auto;
 }
 
 .product-title {
     width: 45%;
+    border-bottom: 1px solid var(--bqblue);
 }
 
 .price {
     width: 15%;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid var(--bqblue);
     display: flex;
     align-items: center;
 }
 
 .quantity {
     width: 30%; 
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid var(--bqblue);
     display: flex;
     align-items: center;
 }
 
 .total {
     width: 10%;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid var(--bqblue);
     display: flex;
     align-items: center;
 }
@@ -183,11 +192,7 @@ li a {
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid lightgrey;
-}
-
-.product ion-icon {
-    cursor: pointer;
+    border-bottom: 1px solid var(--bqblue);
 }
 
 .products {
@@ -198,19 +203,32 @@ li a {
 
 .products img {
     width: 75px;
+    border: var(--color) dotted 1px;
 }
 
-.basketTotalContainer {
+.item-label {
+    border-top: var(--color) solid 1px;
+}
+
+.item-label,
+.item-price {
+    text-align: center;
+}
+
+
+/* Style all innerHTML additions from cart.js */
+.cartTotalContainer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     padding: 10px 0;
 }
 
-.basketTotalTitle {
+.cartTotalTitle {
     width: 30%;
 }
 
-.basketTitle {
+.cartTitle {
     width: 10%;
 }
+
