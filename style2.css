@@ -79,6 +79,7 @@ nav {
     margin: 0px;
     text-decoration: none;
     border-radius: 5px;
+    border: var(--background) dashed 2px;
 }
 
 .container {
@@ -192,7 +193,8 @@ nav {
 .product {
     width: 45%;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid var(--bqblue);
