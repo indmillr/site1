@@ -1,3 +1,4 @@
+// Responsive Drop-Down Menu for Navigation
 function dropMenu() {
     var x = document.getElementById("navbar");
     if (x.className === "navbar") {
@@ -6,8 +7,11 @@ function dropMenu() {
       x.className = "navbar";
     }
   }
-  let carts = document.querySelectorAll('.add-cart');
 
+// Gets Shopping Cart Item from "Add to Cart" button
+let carts = document.querySelectorAll('.add-cart');
+
+// All items available
 let products = [
     {
         name: 'Item One',
@@ -41,6 +45,8 @@ let products = [
     }
 ]
 
+// Begin bulding each shopping cart item once 'Add to Cart' is clicked
+
 for (let i=0; i<carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
@@ -54,6 +60,9 @@ function onLoadCartNumbers () {
         document.querySelector('.cart span').textContent = productNumbers;
     }
 }
+
+// Access local storage to reflect current total number of items in
+// shopping cart on the 'Cart' button on the nav header
 
 function cartNumbers(product) {
     let productNumbers = localStorage.getItem('cartNumbers');
@@ -69,6 +78,9 @@ function cartNumbers(product) {
     
     setItems(product); 
 }
+
+// Add item to cart if not already there, otherwise increase quantity of
+// existing item in cart
 
 function setItems(product) {
     let cartItems = localStorage.getItem('productsInCart');
@@ -93,6 +105,8 @@ function setItems(product) {
     localStorage.setItem("productsInCart", JSON.stringify(cartItems));
 }
 
+// Determines Total Cost for shopping cart
+
 function totalCost(product) {
     let cartCost = localStorage.getItem('totalCost');
 
@@ -104,6 +118,8 @@ function totalCost(product) {
     }
 }
 
+// Display all shopping cart items on cart.html
+
 function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
 
@@ -112,7 +128,9 @@ function displayCart() {
     let productContainer = document.querySelector(".products");
     let cartCost = localStorage.getItem('totalCost');
 
-   
+// Verify that cart.html is currently viewed and, if Shopping Cart contains
+// at least one item, writes HTML to cart.html
+
     if( cartItems && productContainer ) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -131,6 +149,7 @@ function displayCart() {
             `
         });
 
+// DIV for Shopping Cart Total
         productContainer.innerHTML += `
             <div class="cartTotalContainer">
                 <h4 class="cartTotalTitle">
@@ -143,5 +162,6 @@ function displayCart() {
     }
 }
 
+// Run on Page Load
 onLoadCartNumbers();
 displayCart();
