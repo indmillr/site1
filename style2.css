@@ -96,6 +96,13 @@ nav {
     border-radius: 15px;
 }
 
+.item-image {
+    max-width: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
 .image {
     margin-right: 20px;
     margin-left: 20px;
